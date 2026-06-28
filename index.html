@@ -10,46 +10,45 @@
     
     <style>
         :root {
-            --pastel-pink: #F7C9DD;
-            --purple-pink: #EBC0DA;
-            --lavender: #B7B9E9;
-            --blue-purple: #A8B6E8;
-            --white-pink: #FFF8FC;
-            --text-color: #5C4B43; 
+            --cream-white: #F7F3F2;      /* ขาวครีม (พื้นหลัง/การ์ดหลัก) */
+            --strawberry-milk: #EBCFD8;  /* ชมพูนม (ไฮไลท์/ปุ่มเด่น) */
+            --soft-mauve: #D8C4CF;       /* ม่วงอมชมพูอ่อน (เส้นประ/ดีเทล) */
+            --cocoa-pink: #B8948B;       /* ชมพูโกโก้อ่อน (ปุ่มเซฟ/ส่วนประกอบ) */
+            --rose-brown: #8E7473;       /* น้ำตาลกุหลาบ (สีตัวอักษรหลัก อ่านง่าย ไม่ทึบ) */
         }
 
         body {
             font-family: 'Prompt', sans-serif;
-            background: linear-gradient(135deg, var(--white-pink) 0%, var(--pastel-pink) 50%, var(--lavender) 100%);
+            background: linear-gradient(135deg, var(--cream-white) 0%, var(--strawberry-milk) 50%, var(--soft-mauve) 100%);
             min-height: 100vh;
-            color: var(--text-color);
+            color: var(--rose-brown);
         }
         
         @keyframes float-up-down { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(10deg); } }
         @keyframes dash-animation { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
         
         .animate-dash { stroke-dasharray: 12 12; animation: dash-animation 1s linear infinite; }
-        .animate-dash-purple { stroke-dasharray: 12 12; animation: dash-animation 1s linear infinite; stroke: #B7B9E9; }
+        .animate-dash-purple { stroke-dasharray: 12 12; animation: dash-animation 1s linear infinite; stroke: var(--soft-mauve); }
         .anim-float { animation: float-up-down 4s ease-in-out infinite; }
         
         .glass-card {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(247, 201, 221, 0.5);
-            box-shadow: 0 25px 60px -15px rgba(183, 185, 233, 0.2);
+            border: 1px solid rgba(235, 207, 216, 0.6);
+            box-shadow: 0 25px 60px -15px rgba(142, 116, 115, 0.15);
         }
     </style>
 </head>
 <body class="flex flex-col items-center py-6 px-4 relative overflow-x-hidden">
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <svg class="absolute top-[5%] left-[10%] w-8 h-8 text-white/60 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <svg class="absolute top-[15%] right-[10%] w-6 h-6 text-white/50 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <svg class="absolute bottom-[20%] left-[5%] w-5 h-5 text-white/50 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <svg class="absolute bottom-[5%] right-[15%] w-7 h-7 text-white/60 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg class="absolute top-[5%] left-[10%] w-8 h-8 text-white/70 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg class="absolute top-[15%] right-[10%] w-6 h-6 text-white/60 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg class="absolute bottom-[20%] left-[5%] w-5 h-5 text-white/60 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg class="absolute bottom-[5%] right-[15%] w-7 h-7 text-white/70 anim-float" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
     </div>
 
     <div class="max-w-[420px] w-full relative z-10 space-y-5 pb-10">
-        <div class="text-center pt-2 pb-2" style="color: #5C4B43;">
+        <div class="text-center pt-2 pb-2" style="color: var(--rose-brown);">
             <h1 class="text-3xl font-bold">BarbieHolly Store</h1>
             <p class="text-sm font-semibold uppercase tracking-widest mt-0.5 opacity-90">Payment Channel</p>
         </div>
@@ -57,49 +56,49 @@
         <div class="glass-card rounded-[40px] p-3">
             <div class="relative p-2 rounded-[36px] z-10">
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#F7C9DD" stroke-width="2.5" class="animate-dash" />
+                    <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#EBCFD8" stroke-width="2.5" class="animate-dash" />
                 </svg>
-                <img id="qr-image" src="https://i.postimg.cc/fbp7ycPt/line-oa-chat-260619-011752.jpg" class="w-full rounded-[28px]">
+                <img id="qr-image" src="https://i.postimg.cc/8z8Ts3YQ/line-oa-chat-260628-164742.jpg" class="w-full rounded-[28px]">
             </div>
 
-            <div class="px-2 mt-2">
-                <button onclick="downloadQR()" class="w-full bg-[#9CA3DB] text-white font-bold py-3 rounded-full shadow-md active:scale-95 hover:bg-[#8D95D1] transition-all">
+            <div class="px-2 mt-3">
+                <button onclick="downloadQR()" class="w-full bg-[#B8948B] text-white font-bold py-3 rounded-full shadow-sm active:scale-95 hover:bg-[#A8847B] transition-all">
                     ♡ save for payment ⤴︎
                 </button>
             </div>
 
-            <div class="p-4 space-y-5" style="color: #5C4B43;">
+            <div class="p-4 space-y-5" style="color: var(--rose-brown);">
                 <div class="text-center space-y-1">
-                    <p class="font-semibold">ชื่อบัญชี <span class="bg-[#F7C9DD]/60 px-2 py-0.5 rounded-md font-bold">บาร์บี้ฮอลลี่ สโตร์</span> เท่านั้น</p>
+                    <p class="font-semibold">ชื่อบัญชี <span class="bg-[#EBCFD8]/60 px-2 py-0.5 rounded-md font-bold">บาร์บี้ฮอลลี่ สโตร์</span> เท่านั้น</p>
                     <p class="text-[13px] opacity-90">สามารถสแกนได้ทั้งธนาคารและ Wallet<br>โอนแล้วแจ้งสลิปทุกครั้งนะคะ</p>
                 </div>
 
-                <div class="relative bg-white/60 border-none rounded-2xl p-4 text-[12px] shadow-sm leading-relaxed">
+                <div class="relative bg-white/50 border-none rounded-2xl p-4 text-[12px] shadow-sm leading-relaxed">
                     <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="16" fill="none" stroke="#B7B9E9" stroke-width="2" stroke-dasharray="6 6" class="animate-dash-purple" />
+                        <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="16" fill="none" stroke="#D8C4CF" stroke-width="2" stroke-dasharray="6 6" class="animate-dash-purple" />
                     </svg>
-                    <div class="inline-block bg-red-400 text-white px-3 py-0.5 rounded-full font-bold mb-2">สำคัญ</div><br>
+                    <div class="inline-block bg-[#8E7473] text-white px-3 py-0.5 rounded-full font-bold mb-2">สำคัญ</div><br>
                     เกิน 10 น. หลังสรุปยอด “สอบถามก่อนโอน“<br>
                     โอนมาไม่ถามร้าน / โอนเกินจำนวน = ทบใช้ครั้งต่อไปเท่านั้น<br>
                     ไม่โอนกลับทุกกรณี
                 </div>
 
-                <div class="bg-white/60 border border-[#5C4B43]/10 rounded-2xl p-4 text-[12px]">
-                    <span class="text-red-400 font-bold">สั่ง = ชำระภายใน 24 ชม.</span><br>
+                <div class="bg-white/50 border border-[#8E7473]/20 rounded-2xl p-4 text-[12px]">
+                    <span class="text-[#8E7473] font-bold">สั่ง = ชำระภายใน 24 ชม.</span><br>
                     สั่งเล่น ไม่แจ้งว่ายกเลิกหรือไม่รับแล้วทางร้านขออนุญาต<br>
                     ไม่ทำการซื้อขายครั้งต่อไปทุกกรณีค่ะ
                 </div>
             </div>
         </div>
 
-        <div class="text-center font-bold text-white/70">
+        <div class="text-center font-bold" style="color: var(--rose-brown); opacity: 0.85;">
             thank you for your order ♡
         </div>
     </div>
 
     <script>
         function downloadQR() {
-            const imageUrl = 'https://i.postimg.cc/fbp7ycPt/line-oa-chat-260619-011752.jpg';
+            const imageUrl = 'https://i.postimg.cc/8z8Ts3YQ/line-oa-chat-260628-164742.jpg';
             fetch(imageUrl)
                 .then(response => response.blob())
                 .then(blob => {
@@ -116,4 +115,4 @@
         }
     </script>
 </body>
-</html>เ
+</html>
